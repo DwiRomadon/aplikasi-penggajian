@@ -1,0 +1,35 @@
+/*if ($mau_ke == "del") {
+             $this->db->query("DELETE FROM t_master_potongan WHERE id = '$idu'");
+             $this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data has been deleted </div>");
+             redirect('index.php/admin/setPotonganFix');
+         } else if ($mau_ke == "cari") {
+             $a['data']		= $this->db->query("SELECT karyawan.nik,t_master_potongan.id,t_master_potongan.p_kop_pokok, t_master_potongan.p_kop_kredit, t_master_potongan.p_pinjaman, t_master_potongan.p_kredit_bank, t_master_potongan.p_askes, t_master_potongan.p_qurban, t_master_potongan.p_natura, karyawan.nama FROM t_master_potongan INNER JOIN karyawan ON t_master_potongan.nik = karyawan.nik WHERE nama LIKE '%$cari%' ORDER BY nama ASC")->result();
+             $a['page']		= "l_potongan_fix";
+         } else if ($mau_ke == "add") {
+             $a['page']		= "f_potongan_fix";
+
+         } else if ($mau_ke == "edt") {
+             $a['datpil']	= $this->db->query("SELECT * FROM t_master_potongan WHERE id = '$idu'")->row();
+             $a['page']		= "f_potongan_fix";
+         } else if ($mau_ke == "act_add") {
+
+             $this->db->query("INSERT INTO t_master_potongan VALUES (NULL,'$nik','$koPokok','$koKredit','$pinjaman','$kreditBank','$askses','$qurban','$natura')");
+
+             $this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data has been added</div>");
+             redirect('index.php/admin/setPotonganFix');
+
+         } else if ($mau_ke == "act_edt") {
+             $this->db->query("UPDATE t_master_potongan SET nik = '$nik', p_kop_pokok ='$koPokok', p_kop_kredit = '$koKredit', p_pinjaman = '$pinjaman', p_kredit_bank= '$kreditBank', p_askes='$askses', p_qurban='$qurban',p_natura = '$natura' WHERE id = '$id '");
+             $this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data has been update</div>");
+             redirect('index.php/admin/setPotonganFix');
+         }else if($mau_ke == 'tabel_pootongan'){
+             $a['data']		= $this->db->query("SELECT karyawan.nik,t_master_potongan.id,t_master_potongan.p_kop_pokok, t_master_potongan.p_kop_kredit, t_master_potongan.p_pinjaman, t_master_potongan.p_kredit_bank, t_master_potongan.p_askes, t_master_potongan.p_qurban, t_master_potongan.p_natura, karyawan.nama FROM t_master_potongan INNER JOIN karyawan ON t_master_potongan.nik = karyawan.nik ORDER BY karyawan.nama ASC LIMIT $awal, $akhir  ")->result();
+             $a['page']		= "l_tabel_potongan";
+         }
+         else if($mau_ke == 'bayar_potongan'){
+             $a['data']		= $this->db->query("SELECT karyawan.nik,t_master_potongan.id,t_master_potongan.p_kop_pokok, t_master_potongan.p_kop_kredit, t_master_potongan.p_pinjaman, t_master_potongan.p_kredit_bank, t_master_potongan.p_askes, t_master_potongan.p_qurban, t_master_potongan.p_natura, karyawan.nama FROM t_master_potongan INNER JOIN karyawan ON t_master_potongan.nik = karyawan.nik WHERE t_master_potongan.nik='$nikk' ")->row();
+             $a['page']		= "f_pembayaran_potongan";
+         } else {
+             $a['data']		= $this->db->query("SELECT karyawan.nik,t_master_potongan.id,t_master_potongan.p_kop_pokok, t_master_potongan.p_kop_kredit, t_master_potongan.p_pinjaman, t_master_potongan.p_kredit_bank, t_master_potongan.p_askes, t_master_potongan.p_qurban, t_master_potongan.p_natura, karyawan.nama FROM t_master_potongan INNER JOIN karyawan ON t_master_potongan.nik = karyawan.nik ORDER BY karyawan.nama ASC LIMIT $awal, $akhir  ")->result();
+             $a['page']		= "l_potongan_fix";
+         }*/
